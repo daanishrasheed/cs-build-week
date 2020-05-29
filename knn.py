@@ -1,11 +1,6 @@
 import numpy as np
 import operator
 import pandas as pd
-from sklearn.model_selection import train_test_split
-from sklearn.metrics import accuracy_score
-from sklearn.datasets import load_iris
-from sklearn.neighbors import KNeighborsClassifier
-
 
 def euclidean(x, y):
     return np.sqrt(np.sum((x-y)**2))
@@ -34,6 +29,10 @@ class KNN():
             pred.append(neighbors_sorted[0][0])
         return pred
 
+from sklearn.model_selection import train_test_split
+from sklearn.metrics import accuracy_score
+from sklearn.datasets import load_iris
+from sklearn.neighbors import KNeighborsClassifier
  
 iris = load_iris()
 x = iris.data
